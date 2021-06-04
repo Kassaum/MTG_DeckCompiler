@@ -1,0 +1,300 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetLatestChamps" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1440,2713</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetLatestChamps_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="68">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.Activities.Expressions</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetLatestChamps" sap:VirtualizedContainerService.HintSize="1003,2648" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Magic the Gathering | Decks" sap:VirtualizedContainerService.HintSize="961,2556" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="927,2340" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="stdChamps" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="885,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NExtractData sap2010:Annotation.AnnotationText="Get the latest list of Standard Champs" AppendResults="False" DataTable="[stdChamps]" DisplayName="Extract Table Data - Stnd Champs" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Standard'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="885,197" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="0">
+              <uix:NExtractData.ContinueOnError>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="True" />
+                </InArgument>
+              </uix:NExtractData.ContinueOnError>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable ContentHash="9MfhLKCvRUaDvWwod9wUwA" DesignTimeRectangle="457, 236, 710, 1542" FriendlyName="'Stnd_Champs'" FullSelectorArgument="&lt;webctrl id='decklist-page' tag='DIV' /&gt;" InformativeScreenshot="e1a45a3738a04969bcad356ad1ffe8a5.png" Reference="P-8QzGVZs0-NDIzU9HANgg/14_gZLtOPUusgk1iQzj3ow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='World&amp;apos;s Largest Magic The Gathering Store' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Get the link of each champ and add Item to Queue" DataTable="[stdChamps]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="885,1947" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence sap2010:Annotation.AnnotationText="Get the link of each champ and add Item to Queue" DisplayName="Body" sap:VirtualizedContainerService.HintSize="851,1795" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="champName" />
+                      <Variable x:TypeArguments="x:String" Name="datachamp" />
+                      <Variable x:TypeArguments="x:String" Name="champDate" />
+                      <Variable x:TypeArguments="x:String" Name="champLink" />
+                      <Variable x:TypeArguments="x:Boolean" Name="champlinkFound" />
+                      <Variable x:TypeArguments="x:Int32" Name="idx" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="809,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[champName]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow.ItemArray(0).ToString.Substring(11)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="809,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[champDate]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow.ItemArray(0).ToString.Substring(0,10)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="809,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Data: &quot;+champDate+Environment.NewLine+&quot;Campeonato: &quot;+champName]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="809,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[idx]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="809,1174" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="6">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <Sequence sap2010:Annotation.AnnotationText="Get the attribute href that bring the link information&#xD;&#xA;Name of the champs are not unique, Dates are note unique&#xD;&#xA;idx is used when more then one champs have the same date, the date is the anchor of the champs name." DisplayName="Action" sap:VirtualizedContainerService.HintSize="767,936" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="725,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[champLink]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">nf</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:GetAttribute sap2010:Annotation.AnnotationText="Continue on Error = true so we can keep the information and try with the next idx for date" Attribute="href" ContinueOnError="True" DisplayName="Get Attribute 'A '" sap:VirtualizedContainerService.HintSize="725,176" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                              <ui:GetAttribute.Result>
+                                <OutArgument x:TypeArguments="x:String">[champlink]</OutArgument>
+                              </ui:GetAttribute.Result>
+                              <ui:GetAttribute.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="18481268-69e8-47ad-a0c9-c016de1e5b8e" InformativeScreenshot="21283d91b6de8e4df8daea4f3ca34492" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='World&amp;apos;s Largest Magic The Gathering Store' /&gt;&lt;webctrl aaname='*{0}*' idx='{1}' /&gt;&lt;nav up='2' /&gt;&lt;webctrl aaname='*{2}*' /&gt;&quot;, champDate, idx, champName)]">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:GetAttribute.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:GetAttribute>
+                            <If sap2010:Annotation.AnnotationText="Validates if we got the champLink" Condition="[champLink.Length&lt;3]" sap:VirtualizedContainerService.HintSize="725,471" sap2010:WorkflowViewState.IdRef="If_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[idx]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[idx+1]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[champlinkFound]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;link para champ: &quot;+champLink]" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[champlinkFound]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean">
+                          <p:IsTrue DisplayName="Is true" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="IsTrue_1" Input="[champlinkFound]" />
+                        </ActivityFunc>
+                      </ui:RetryScope.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:RetryScope>
+                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="809,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[champLink]">
+                      <ui:AddQueueItem.ItemInformation>
+                        <InArgument x:TypeArguments="x:String" x:Key="ChampLink">[champLink]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="ChampName">[champName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="ChampDate">[champDate]</InArgument>
+                      </ui:AddQueueItem.ItemInformation>
+                    </ui:AddQueueItem>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="yaYZBrJ080qGtr_k2MjaBA" IconBase64="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" InformativeScreenshot="8f404573f96ebf92fb0152735534f7ac.png" Reference="P-8QzGVZs0-NDIzU9HANgg/FLAEe1VTf0yhmHIwIguQ2w" Selector="&lt;html app='chrome.exe' title='Magic the Gathering | Decks' /&gt;" Url="https://old.starcitygames.com/content/decklists/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

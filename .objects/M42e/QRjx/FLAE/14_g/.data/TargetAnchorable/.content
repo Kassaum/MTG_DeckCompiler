@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="9MfhLKCvRUaDvWwod9wUwA" DesignTimeRectangle="457, 236, 710, 1542" FriendlyName="'DIV decklist-page'" FullSelectorArgument="&lt;webctrl id='decklist-page' tag='DIV' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='World&amp;apos;s Largest Magic The Gathering Store' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="e1a45a3738a04969bcad356ad1ffe8a5.png" xmlns="">0Xh8TLgpjYEGOKz3dIdDL0g</imageRef>
+</TargetAnchorable>

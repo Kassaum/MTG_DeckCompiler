@@ -1,0 +1,18 @@
+﻿{
+  "Id": "FLAEe1VTf0yhmHIwIguQ2w",
+  "Reference": "P-8QzGVZs0-NDIzU9HANgg/FLAEe1VTf0yhmHIwIguQ2w",
+  "ParentRef": "P-8QzGVZs0-NDIzU9HANgg/QRjxBRTD7UW4oKqu-ezsGQ",
+  "Name": "StarcityGames",
+  "Description": "Open StarcityGames site in Chrome",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2021-06-03T12:29:57.4290315Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.4.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-06-03T12:53:27.2734664Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

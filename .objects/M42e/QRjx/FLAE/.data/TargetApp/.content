@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="yaYZBrJ080qGtr_k2MjaBA" Reference="P-8QzGVZs0-NDIzU9HANgg/FLAEe1VTf0yhmHIwIguQ2w" Selector="&lt;html app='chrome.exe' title='Magic the Gathering | Decks' /&gt;" Url="https://old.starcitygames.com/content/decklists/" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0ocnmqKZ1QUOYdT2AV45ejg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="8f404573f96ebf92fb0152735534f7ac.png" xmlns="">0czdtDOqftEO8mx5qQQ0Gww</imageRef>
+</TargetApp>
