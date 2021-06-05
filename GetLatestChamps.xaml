@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetLatestChamps" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetLatestChamps" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1440,2713</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1440,3052</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetLatestChamps_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -85,19 +85,19 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetLatestChamps" sap:VirtualizedContainerService.HintSize="1003,2648" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetLatestChamps" sap:VirtualizedContainerService.HintSize="1003,2987" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Magic the Gathering | Decks" sap:VirtualizedContainerService.HintSize="961,2556" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Magic the Gathering | Decks" sap:VirtualizedContainerService.HintSize="961,2895" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="927,2340" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="927,2639" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="stdChamps" />
             </Sequence.Variables>
@@ -122,13 +122,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NExtractData>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Get the link of each champ and add Item to Queue" DataTable="[stdChamps]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="885,1947" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Get the link of each champ and add Item to Queue" DataTable="[stdChamps]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="885,2246" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Get the link of each champ and add Item to Queue" DisplayName="Body" sap:VirtualizedContainerService.HintSize="851,1795" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence sap2010:Annotation.AnnotationText="Get the link of each champ and add Item to Queue" DisplayName="Body" sap:VirtualizedContainerService.HintSize="851,2094" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="champName" />
                       <Variable x:TypeArguments="x:String" Name="datachamp" />
@@ -171,7 +171,7 @@
                     <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="809,1174" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="6">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
-                          <Sequence sap2010:Annotation.AnnotationText="Get the attribute href that bring the link information&#xD;&#xA;Name of the champs are not unique, Dates are note unique&#xD;&#xA;idx is used when more then one champs have the same date, the date is the anchor of the champs name." DisplayName="Action" sap:VirtualizedContainerService.HintSize="767,936" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence sap2010:Annotation.AnnotationText="Get the attribute href that bring the link information&#xA;Name of the champs are not unique, Dates are note unique&#xA;idx is used when more then one champs have the same date, the date is the anchor of the champs name." DisplayName="Action" sap:VirtualizedContainerService.HintSize="767,936" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -271,13 +271,33 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:RetryScope>
-                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="809,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[champLink]">
-                      <ui:AddQueueItem.ItemInformation>
-                        <InArgument x:TypeArguments="x:String" x:Key="ChampLink">[champLink]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="ChampName">[champName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="ChampDate">[champDate]</InArgument>
-                      </ui:AddQueueItem.ItemInformation>
-                    </ui:AddQueueItem>
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="809,322" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch.Try>
+                        <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[champLink]">
+                          <ui:AddQueueItem.ItemInformation>
+                            <InArgument x:TypeArguments="x:String" x:Key="ChampLink">[champLink]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="ChampName">[champName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="ChampDate">[champDate]</InArgument>
+                          </ui:AddQueueItem.ItemInformation>
+                        </ui:AddQueueItem>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,160" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;Item not added to queue&quot;]" />
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
